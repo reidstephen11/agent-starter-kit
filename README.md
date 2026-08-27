@@ -23,15 +23,25 @@ memorised by you.
    Codex, Gemini CLI, Cursor, Copilot, and others). If yours can't read a folder but can
    take attachments or a project, upload the files instead.
 
-3. **Paste in one of two prompts:**
+3. **Tell it to set you up.** Something as short as *"help me set this up"* is enough.
 
-   - **[`ADAPT-PROMPT.md`](ADAPT-PROMPT.md)** — *most people want this.* The agent reads
-     the repo, then interviews you about your subject, your school, your tools and the job
-     you actually want done, and designs a setup that fits **you**. It is told to treat
-     this repo as evidence rather than a specification, and to tell you which of these
-     findings don't apply to your situation.
-   - **[`SETUP-PROMPT.md`](SETUP-PROMPT.md)** — if you'd rather run the structure here
-     roughly as it stands. The agent interviews you and fills this kit in.
+   The repo carries its own instructions (`AGENTS.md`, with `CLAUDE.md` and `GEMINI.md`
+   stubs pointing at it), and most agent tools read those automatically when they open a
+   folder. Those instructions tell the agent that this is an unconfigured copy, that it
+   should read the repo first, and that its job is to interview you and build **your**
+   setup — not to install this one or start writing lessons.
+
+   It will offer you two paths and recommend the first:
+
+   - **Adapt** — *most people want this.* It designs a setup around your subject, your
+     school, your tools and the job you actually want done, treating this repo as evidence
+     rather than a specification, and telling you which findings here don't apply to you.
+   - **Use** — run the structure in this repo roughly as it stands, filled in with your
+     answers.
+
+   **If your tool doesn't read folder instructions automatically** — most chat interfaces
+   don't — paste in the contents of [`ADAPT-PROMPT.md`](ADAPT-PROMPT.md) (or
+   [`SETUP-PROMPT.md`](SETUP-PROMPT.md) for the second path) and it will do the same thing.
 
 **What the interview is actually like.** One question at a time, and it goes for a while —
 your school and cohort, what you think good planning looks like, how prescriptive you want

@@ -1,5 +1,33 @@
 # Agent instructions — <your name>'s teaching workspace
 
+## FIRST: is this an unconfigured copy of the starter kit?
+
+**Check before you do anything else.** If the files in `Context/` still contain their
+`<!-- ... -->` prompts rather than real answers, and `AGENTS.md` still contains
+`<your name>` placeholders, then this is a fresh copy of a published starter kit and
+**nobody has configured it yet.** The rest of this file describes a workspace that does
+not exist yet — do not follow it, and do not treat the empty context pack as a statement
+that the teacher has no standards.
+
+In that case, do this instead:
+
+1. Read `README.md` and `LEARNINGS.md` in full, then `ADAPT-PROMPT.md`.
+2. Tell the user, in a sentence or two, what this repo is and that you are about to
+   interview them to build **their** setup rather than install this one.
+3. Then **follow `ADAPT-PROMPT.md`** — treat its instructions as if the user had pasted
+   them. If the user says they would rather use this structure as it stands, follow
+   `SETUP-PROMPT.md` instead.
+
+Ask which they want, offer the adapt path as the recommendation, and start the interview.
+One question at a time. Do not draft any teaching resource in that session, and do not
+fill any part of `Context/` with your own guesses about their school.
+
+Once the pack is filled in and the placeholders below are replaced, delete this section —
+everything after it is the real operating instruction set.
+
+---
+
+
 <!-- These are the standing instructions the agent reads every session. Most agent tools
      load a file like this from the working directory automatically — they just disagree
      about the name (AGENTS.md, CLAUDE.md, GEMINI.md). Rename or stub it to suit yours;
