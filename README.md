@@ -1,27 +1,65 @@
 # Agent starter kit — curriculum QA and student feedback
 
-One teacher's working setup for running AI agents on real teaching, published so other
-teachers can take what's useful. Two workflows: an audit of a unit against your own
-standards and the actual curriculum text, and a weekly formative feedback pass over a
-class set of student work.
+One teacher's working setup for using AI to do two jobs on real teaching:
 
-## Start here: hand this repo to your agent
+- **Check a unit** — the AI reads your unit plan, task and rubric, compares them against
+  the official curriculum wording and against your own standards, and hands you a ranked
+  list of problems. It changes nothing; you decide what to fix.
+- **Draft formative feedback** — the AI reads a class set of student work, drafts short
+  feedback grounded in what each student actually wrote, and tells you privately who needs
+  you this week. You review everything before it goes anywhere near a student.
+
+Published so other teachers can take what's useful — including the parts that went wrong.
+
+## New to this? Start here
+
+**No programming required, and you don't need to understand GitHub.** This repo is a
+folder of ordinary text files. There is nothing to install from it, no code in it, and
+nothing in it runs on your computer. It is a set of written instructions that an AI reads.
+
+**What you do need:** an AI tool that can *read files in a folder on your computer.* That
+is the one requirement, and it rules out most ordinary chatbot windows. Tools that can do
+it include Claude Code, OpenAI's Codex, Gemini CLI, Cursor and GitHub Copilot. Several
+run in a terminal — a plain text window where you type commands — which looks
+intimidating and takes about ten minutes to get used to. If you have never opened one,
+that is the actual barrier here, and it is worth asking your school's IT or a colleague
+who codes to sit with you for the first fifteen minutes.
+
+**If you only have a normal chat window** (the ChatGPT, Claude or Gemini website), you can
+still do this: upload the files into a project or attach them to a conversation, and paste
+in the contents of [`ADAPT-PROMPT.md`](ADAPT-PROMPT.md). You'll lose the ability to have
+the AI read and write your actual unit folders, which is most of the value, but the
+interview and the thinking still work.
+
+**Unfamiliar words** — repo, clone, terminal, CLI, markdown, context pack — are all
+explained in plain English in **[`GLOSSARY.md`](GLOSSARY.md)**. Nothing in this repo needs
+more than that page.
+
+**Time and money.** Setting up properly is an afternoon, most of it spent writing down
+what you think good teaching looks like — not fighting software. The AI tools above are
+paid subscriptions or usage-based; check what your school already has before paying for
+anything yourself.
+
+## The three steps
 
 **You do not have to read this repo to use it.** The intended way in is to give it to an
-AI agent and let it interview you — the repo is written to be read by the agent, not
-memorised by you.
+AI and let it interview you — the files are written to be read by the AI, not memorised by
+you.
 
-1. **Download or clone this repo** to your own machine.
+1. **Download this folder to your computer.**
 
-   ```
-   git clone https://github.com/reidstephen11/agent-starter-kit.git
-   ```
+   On this page, click the green **Code** button, then **Download ZIP**. Unzip it, and put
+   the folder somewhere you'll find it again — alongside your teaching files is sensible.
 
-   No git? Use the green **Code → Download ZIP** button and unzip it.
+   *(If you use git: `git clone https://github.com/reidstephen11/agent-starter-kit.git`)*
 
-2. **Open your AI agent in that folder** — any tool that can read local files (Claude Code,
-   Codex, Gemini CLI, Cursor, Copilot, and others). If yours can't read a folder but can
-   take attachments or a project, upload the files instead.
+2. **Open your AI tool in that folder.**
+
+   For terminal tools, this means: open the terminal, move into the folder, and start the
+   tool there — the AI can then see every file in it. For Cursor or a code editor, use
+   **File → Open Folder** and pick it. If you're not sure how, ask the AI itself: *"how do
+   I open you in a specific folder on a Mac?"* is a question all of these tools answer
+   well.
 
 3. **Tell it to set you up.** Something as short as *"help me set this up"* is enough.
 
@@ -39,9 +77,10 @@ memorised by you.
    - **Use** — run the structure in this repo roughly as it stands, filled in with your
      answers.
 
-   **If your tool doesn't read folder instructions automatically** — most chat interfaces
-   don't — paste in the contents of [`ADAPT-PROMPT.md`](ADAPT-PROMPT.md) (or
-   [`SETUP-PROMPT.md`](SETUP-PROMPT.md) for the second path) and it will do the same thing.
+   **If nothing happens, or it starts writing lesson plans at you**, its instructions
+   didn't load. Paste in the contents of [`ADAPT-PROMPT.md`](ADAPT-PROMPT.md) (or
+   [`SETUP-PROMPT.md`](SETUP-PROMPT.md) for the second path) and it will do the same
+   thing. That is also the approach to use in a plain chat window.
 
 **What the interview is actually like.** One question at a time, and it goes for a while —
 your school and cohort, what you think good planning looks like, how prescriptive you want
@@ -205,6 +244,7 @@ Do these in order. Don't start at step 3.
 | File | What it's for |
 |---|---|
 | `LEARNINGS.md` | **Start here.** What went wrong, what it cost, what is still unsolved. |
+| `GLOSSARY.md` | Plain-English explanations of every unfamiliar word here — repo, agent, terminal, markdown, context pack. |
 | `ADAPT-PROMPT.md` | Paste into your agent to design your own setup using this as reference. |
 | `SETUP-PROMPT.md` | Paste into your agent to configure this kit itself. It sets the agent up as your configurer, not your author. |
 | `AGENTS.md` | The standing instructions the agent reads every session. Edit freely — it's yours. |
