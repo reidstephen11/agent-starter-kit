@@ -5,10 +5,58 @@ teachers can take what's useful. Two workflows: an audit of a unit against your 
 standards and the actual curriculum text, and a weekly formative feedback pass over a
 class set of student work.
 
-**The most valuable file here is [`LEARNINGS.md`](LEARNINGS.md)** — eighteen things that
-went wrong over a term and what each one cost. Most people should read that, take three or
-four ideas from it, and build something that fits their own tools. Copying the structure
-wholesale is supported but is not the point.
+## Start here: hand this repo to your agent
+
+**You do not have to read this repo to use it.** The intended way in is to give it to an
+AI agent and let it interview you — the repo is written to be read by the agent, not
+memorised by you.
+
+1. **Download or clone this repo** to your own machine.
+
+   ```
+   git clone https://github.com/reidstephen11/agent-starter-kit.git
+   ```
+
+   No git? Use the green **Code → Download ZIP** button and unzip it.
+
+2. **Open your AI agent in that folder** — any tool that can read local files (Claude Code,
+   Codex, Gemini CLI, Cursor, Copilot, and others). If yours can't read a folder but can
+   take attachments or a project, upload the files instead.
+
+3. **Paste in one of two prompts:**
+
+   - **[`ADAPT-PROMPT.md`](ADAPT-PROMPT.md)** — *most people want this.* The agent reads
+     the repo, then interviews you about your subject, your school, your tools and the job
+     you actually want done, and designs a setup that fits **you**. It is told to treat
+     this repo as evidence rather than a specification, and to tell you which of these
+     findings don't apply to your situation.
+   - **[`SETUP-PROMPT.md`](SETUP-PROMPT.md)** — if you'd rather run the structure here
+     roughly as it stands. The agent interviews you and fills this kit in.
+
+**What the interview is actually like.** One question at a time, and it goes for a while —
+your school and cohort, what you think good planning looks like, how prescriptive you want
+plans to be, what the agent must never say, how you want things worded. It writes your
+answers down in `Context/` and shows you each file to correct before moving on. Both
+prompts explicitly forbid the agent from guessing any of this on your behalf, because a
+context pack full of plausible inventions about your school is worse than an empty one —
+six weeks later you can't tell which standards in it are actually yours.
+
+**Nothing gets generated in that first session.** No lessons, no units, no feedback. It is
+a configuration conversation, and it ends by telling you what exists, what's still empty,
+and what the smallest useful first job would be.
+
+| | **Adapt it** *(recommended)* | **Use it** |
+|---|---|---|
+| For | Building your own setup, informed by this one | Getting the structure here running as-is |
+| Prompt | [`ADAPT-PROMPT.md`](ADAPT-PROMPT.md) | [`SETUP-PROMPT.md`](SETUP-PROMPT.md) |
+| You end up with | Something shaped like your teaching | Something shaped like this repo |
+
+## If you'd rather just read something
+
+**Read [`LEARNINGS.md`](LEARNINGS.md).** Eighteen things that went wrong over a term of
+running this on real teaching, and what each one cost. It stands on its own, it assumes no
+particular tool, and it's the part worth your time even if you never set any of this up.
+Copying the structure wholesale is supported but is not the point.
 
 ## Read this first: what this repo is and isn't
 
