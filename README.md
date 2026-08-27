@@ -1,0 +1,173 @@
+# Agent starter kit — curriculum QA and student feedback
+
+One teacher's working setup for running AI agents on real teaching, published so other
+teachers can take what's useful. Two workflows: an audit of a unit against your own
+standards and the actual curriculum text, and a weekly formative feedback pass over a
+class set of student work.
+
+**The most valuable file here is [`LEARNINGS.md`](LEARNINGS.md)** — eighteen things that
+went wrong over a term and what each one cost. Most people should read that, take three or
+four ideas from it, and build something that fits their own tools. Copying the structure
+wholesale is supported but is not the point.
+
+## Read this first: what this repo is and isn't
+
+**It is** a record of what one teacher found out, with the structure that came out of it,
+emptied of anything specific to that school. Every rule in the workflow files started as a
+mistake someone made.
+
+**It isn't** a product, a finished system, or anyone's units, feedback or student data. The
+setup it was abstracted from was about eight weeks old when this was written and is still
+being corrected week to week. Most of that time went on finding out how the agent goes
+wrong. Expect your first term to go the same way — that is the job, not a defect in the
+kit.
+
+**It also isn't** an endorsement by anyone's employer or education department. This is
+personal work, published in a personal capacity. See [Disclaimer](#disclaimer).
+
+## Two ways in — pick one
+
+| | **Adapt it** *(recommended)* | **Use it** |
+|---|---|---|
+| For | Building your own setup, informed by this one | Getting the structure here running as-is |
+| You read | `LEARNINGS.md`, then skim the rest | The whole repo |
+| Prompt | [`ADAPT-PROMPT.md`](ADAPT-PROMPT.md) | [`SETUP-PROMPT.md`](SETUP-PROMPT.md) |
+| You end up with | Something shaped like your teaching | Something shaped like this repo |
+
+Both prompts are written to be pasted into an agent that can read the files in this folder.
+Either way, the first hour of real work is the same: writing down what you actually believe
+about good teaching, in your own words, in `Context/`.
+
+## Any agent, any stack
+
+Nothing here is specific to one AI tool. The setup it came from runs across two different
+agents on the same folder, and the files are plain markdown with no scripts to install.
+
+**Making the agent read the standing instructions.** Most coding-agent tools automatically
+read an instructions file from the working directory; they just disagree about the name.
+Rename or symlink `AGENTS.md` to whatever yours expects — `AGENTS.md` is read by Codex,
+Cursor, Copilot and several others; Claude Code uses `CLAUDE.md`; Gemini CLI uses
+`GEMINI.md`. If your tool has no such convention (most chat interfaces don't), paste the
+file's contents at the start of the session, or attach it as a project file. If you keep
+two copies for two tools, make one a stub pointing at the other — instructions that drift
+apart between front-ends are worse than one file in the wrong format.
+
+**What is genuinely load-bearing**, whatever you run:
+
+- A **context pack** the agent reads instead of improvising from general knowledge.
+- **Curriculum text quoted from a file you saved**, never written from memory.
+- A **hard separation** between planning work and any folder containing student work.
+- **Read-only audits**, with fixing as a separate job you choose to start.
+- A **handoff note** per project, so the next session doesn't re-derive what you decided.
+
+**What is incidental** — change any of it without hesitation: the folder names, the
+`.curriculum.json` format, Word documents and content controls (any format with named
+fields works), OneDrive, the three-tier priority scheme, and every Australian-specific
+reference below.
+
+**On jurisdiction.** This was written in a Queensland state school: it says HOD, ACARA,
+QCAA, "Department OneDrive", "achievement standard", "content descriptor". Read those as
+placeholders for whoever approves your use of student data, whichever authority sets your
+curriculum, and whatever your school-managed storage is. The underlying rules — get
+approval before putting identifiable student work through any AI tool, keep it in
+school-managed storage, quote your standards rather than recalling them — are not
+Australia-specific.
+
+## Two rules that aren't negotiable
+
+**1. Student work stays in school-managed storage, and the agent runs locally.**
+Run the feedback workflow only from a locally-synced school folder, with an agent running
+on your own machine. Not a cloud/web agent mode, not a personal account, and never by
+pasting student work into a chat window. Before you put any identifiable student work
+through any AI tool, clear it with your line manager and check your employer's current
+position — that is an institutional decision, not a teacher-level one. This kit refers to
+students by folder ID (initials or a code) for the same reason: no names in prompts,
+reports or file contents.
+
+**2. The agent recommends; you decide.**
+Grades, ratings, milestone ticks, "on track / needs support" calls, and anything a parent
+might read are yours. The agent's job is to notice things and put them in front of you.
+
+## Pick a track — you don't have to take both
+
+The two workflows share a spine (the `Context/` pack and `AGENTS.md`) but are otherwise
+independent. Decide before you start; both prompts ask you first thing.
+
+| | **Track A — curriculum only** | **Track B — feedback as well** |
+|---|---|---|
+| You get | Unit audits against your own standards | The above, plus the weekly student pass |
+| Student data involved | **None** | Yes — with everything that follows from that |
+| Approval needed | None beyond normal practice | Clear it with your line manager first |
+| Setup time | An afternoon | An afternoon, plus building a structured student template |
+| Ongoing | Run a pass when you want one | A weekly commitment, including hand spot-checks |
+
+**Most people should start on Track A and stay there for a term.** It carries no
+student-data risk, and it is where you find out whether your context pack actually says
+what you meant — which is the thing Track B depends on.
+
+### Taking only Track A
+
+Delete these and the kit is complete without them:
+
+- `workflows/feedback-pass.md`
+- `structure/class-side-AGENTS-template.md`
+- the "class side" tree in `structure/FOLDER-STRUCTURE.md`
+- the feedback line under "The workflows" in `AGENTS.md`
+
+Do **not** delete the student data boundary section in `AGENTS.md`, even on Track A. It
+costs nothing and it is the rule you will be glad is already written down the first time
+you are tempted to paste something into a chat window.
+
+### Taking only Track B
+
+Possible, and occasionally right — but you still need `Context/` (the feedback pass reads
+your style, your exclusions and your assessment criteria from it) and you still need the
+worklog convention. In practice you keep everything except `workflows/curriculum-pass.md`
+and the unit-folder half of `structure/`.
+
+## Order of operations
+
+Do these in order. Don't start at step 3.
+
+0. **Choose your track.** Both prompts ask; answer deliberately.
+1. **Build your context pack** (`Context/`). Both tracks need it. An hour of writing down
+   what you actually believe about good planning, what your school expects, and how you
+   want things worded. This is the whole game — the agent is only as good as this folder,
+   and everything downstream reads from it. Write it yourself: a pack the agent inferred
+   about your school is worse than an empty one.
+2. **Run a curriculum pass** on one unit you already know is decent. No student data
+   involved, so nothing can go badly wrong, and you find out quickly whether your context
+   pack says what you meant.
+3. **Only then** consider a feedback pass, and run it in **advisory mode** (agent drafts,
+   you enter the feedback) for at least several weeks before letting anything write into a
+   student's file.
+
+## What's in here
+
+| File | What it's for |
+|---|---|
+| `LEARNINGS.md` | **Start here.** What went wrong, what it cost, what is still unsolved. |
+| `ADAPT-PROMPT.md` | Paste into your agent to design your own setup using this as reference. |
+| `SETUP-PROMPT.md` | Paste into your agent to configure this kit itself. It sets the agent up as your configurer, not your author. |
+| `AGENTS.md` | The standing instructions the agent reads every session. Edit freely — it's yours. |
+| `Context/` | Your control surface: school profile, teaching beliefs, house style, exclusions, curriculum text, templates. Mostly empty, for you to fill. |
+| `workflows/curriculum-pass.md` | The QA-on-planning procedure. **Track A.** |
+| `workflows/feedback-pass.md` | The student feedback procedure. **Track B** — delete it if you aren't running it. |
+| `structure/` | Folder layouts and templates: unit folder shape, README, worklog, alignment file. |
+
+## Disclaimer
+
+Published by a teacher in a personal capacity. It is not endorsed by, and does not
+represent the position of, any school, employer or education department. It contains no
+student data, no student work, and no identifying information about any school or student.
+
+Nothing here constitutes approval to use AI tools with student data. That approval is
+yours to obtain, from your own institution, under whatever policy currently applies to
+you. If your employer's position and this repo disagree, your employer's position wins.
+
+## Licence
+
+[CC BY 4.0](LICENSE) — copy it, change it, use it with your classes, publish your own
+version. Attribution appreciated, and if you find a failure mode that isn't in
+`LEARNINGS.md`, an issue or a pull request adding it is the most useful contribution
+this repo can receive.

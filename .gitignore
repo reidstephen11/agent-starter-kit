@@ -1,0 +1,26 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Word/Office lock files — these appear in class folders and must never be committed
+~$*
+
+# Your own filled-in context is yours; uncomment these if you fork this repo to hold
+# your real setup and want to keep the pack private.
+# Context/school-profile.md
+# Context/teaching-beliefs.md
+# Context/writing-style.md
+# Context/curriculum/*
+# !Context/curriculum/README.md
+# Context/exemplars/*
+# !Context/exemplars/README.md
+# Context/templates/*
+# !Context/templates/README.md
+# Context/_source/
+
+# Never commit anything from the class side. If you ever put a git repo near student
+# work, these are the lines that matter — and do not add a remote.
+_reports/
+students/
+*.docx
+*.doc
