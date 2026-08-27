@@ -155,15 +155,31 @@ Do these in order. Don't start at step 3.
 | `workflows/feedback-pass.md` | The student feedback procedure. **Track B** — delete it if you aren't running it. |
 | `structure/` | Folder layouts and templates: unit folder shape, README, worklog, alignment file. |
 
+## Where this came from
+
+The workflows here were run on real teaching, including real student writing, **with the
+school's approval and under the conditions described in this repo** — locally-run agents,
+school-managed storage, folder IDs rather than names, and a teacher deciding every
+judgement. The work forms part of a case study the employing department is engaging with.
+
+That is worth stating plainly, because the honest version of this account is the useful
+one. The failures in `LEARNINGS.md` happened. They happened inside an approved trial with
+guardrails, which is the argument for building the guardrails — not an argument that the
+work should not have been done.
+
 ## Disclaimer
 
-Published by a teacher in a personal capacity. It is not endorsed by, and does not
-represent the position of, any school, employer or education department. It contains no
-student data, no student work, and no identifying information about any school or student.
+Published by a teacher in a personal capacity. Approval for the trial is not endorsement
+of this repo: nothing here represents the position of any school, employer or education
+department, and any errors in it are the author's.
 
-Nothing here constitutes approval to use AI tools with student data. That approval is
-yours to obtain, from your own institution, under whatever policy currently applies to
-you. If your employer's position and this repo disagree, your employer's position wins.
+The repo itself contains no student data, no student work, and no identifying information
+about any school or student.
+
+Nothing here constitutes approval for *you* to use AI tools with student data. That
+approval is yours to obtain, from your own institution, under whatever policy currently
+applies to you. If your employer's position and this repo disagree, your employer's
+position wins.
 
 ## Licence
 
