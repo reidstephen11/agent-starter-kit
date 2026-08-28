@@ -68,7 +68,7 @@ coverage matrix from the per-unit JSON files.
 <school storage>/<class code>/<Unit>/
 ├── AGENTS.md                       privacy boundary FIRST, then the local rules
 ├── WEEKS.md                        calendar dates → unit weeks → milestone targets
-├── <ID>/                           one folder per student — initials or a code, NEVER a name
+├── <ID>/                           one folder per student — an opaque code, NEVER a name
 │   └── <ID> Journal.docx           the structured working document
 ├── _TEST/                          fake student; every workflow change is tried here first
 ├── _ARCHIVE/                       withdrawn students; excluded from every sweep
@@ -85,13 +85,30 @@ coverage matrix from the per-unit JSON files.
 - **Per-student profile files are the memory.** They are what makes week 9's feedback know
   about week 3. Keep a section of your own notes in them, and tell the agent it may read
   those but never edit them.
-- **Dated reports are immutable.** Never edit an old one — the history is the audit trail
-  if a feedback decision is ever questioned.
+- **Dated reports are immutable, not permanent.** Never edit an old one — the history is
+  the audit trail if a feedback decision is ever questioned. But set a deletion date at
+  setup (end of the school year is a reasonable default), or the audit trail becomes an
+  indefinite student record you never decided to keep.
+- **Codes, not initials.** In a class of twenty-five, initials identify. And an ID attached
+  to a student's own writing is pseudonymous, not anonymous — it is still student
+  information and the boundary rules still apply to it in full.
 - **`_TEST` earns its keep the first time a change corrupts something.**
 
 ## If you use git
 
-Optional, but it gives you an undo and a tripwire for cloud-sync clobbers. On the class
-side, if you do: **never add a remote**, and gitignore every student folder and every
-dated report — track only the instructions, the workflow files and the tools. Student work
-must not leave school-managed storage, and a remote is exactly how it would.
+Optional, and on the planning side it gives you an undo and a tripwire for cloud-sync
+clobbers.
+
+**On the class side, the default answer is don't.** There is no version-control problem
+here worth the risk of a repo full of student work acquiring a remote one afternoon. If you
+do it anyway: **never add a remote**, and use the deny-by-default template in
+`class-side-gitignore-template.txt` — it ignores everything and allows back only the
+instruction files. Do not write your own blocklist of extensions: it will stop the
+documents and miss the slide deck, the prototype photo, the exported PDF and the enrolment
+spreadsheet someone dropped in the folder.
+
+One thing about `.gitignore` that catches people out, on either side: **it only affects
+files git is not already tracking.** Adding a path to it after the file has been committed
+does nothing, and the file stays in the history even if you delete it later. Decide what is
+ignored before the first commit — see the note at the bottom of this repo's own
+`.gitignore`.

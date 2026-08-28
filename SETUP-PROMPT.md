@@ -65,10 +65,13 @@ Work through this with me:
 5. **Track B only — set up the student-data side separately**, per the boundary in
    `AGENTS.md`: a different folder, in school-managed storage, with its own `AGENTS.md`
    from `structure/class-side-AGENTS-template.md`. Ask me for the student folder IDs I
-   want to use (initials or codes, **not names**). If I try to give you names, stop me and
-   explain why. Ask me to confirm I have cleared this with whoever approves it
-   at my school; if I have not, build the
-   folder shape but tell me not to run a pass until I have.
+   want to use (**opaque codes, not names, and not initials** — in a class of twenty-five
+   initials identify). If I try to give you names, stop me and explain why. Ask me two
+   things and record my answers: whether I have cleared this with whoever approves it at my
+   school **for the specific AI tool and account I am using** — running locally is not the
+   same as processing locally, and the tool sends what it reads to a provider — and what my
+   retention rule is for briefings and per-student profiles. If either is unanswered, build
+   the folder shape but tell me not to run a pass until they are.
 
    **Track A — skip this step entirely** and confirm to me that you have.
 

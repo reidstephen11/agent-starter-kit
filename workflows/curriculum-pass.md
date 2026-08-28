@@ -10,6 +10,11 @@ against the context pack and the official curriculum text, and writes one findin
 It fixes nothing. Fixing is a separate job I start after reading the findings, so that I
 always see the problem before the repair.
 
+**What read-only means here**, precisely, because the agent will otherwise stop and ask:
+no changes to any teaching, assessment or curriculum artefact. Writing the findings file
+and appending an entry to the unit's `.worklog.md` are part of the pass, and do not need
+separate approval.
+
 **Why read-only matters.** An agent that finds and fixes in one pass gives you a changed
 unit and no way to tell what was actually wrong with it. Separating them means the
 findings file is reviewable evidence, and two runs a month apart are comparable.
@@ -22,6 +27,10 @@ findings file is reviewable evidence, and two runs a month apart are comparable.
 3. Read the unit's `README.md` and its alignment file (`.curriculum.json` or
    `alignment.md`) — what the unit *claims* it teaches and assesses.
 4. Open the relevant descriptor/standard text from `Context/curriculum/`. Quote from it.
+   Check its provenance header — authority, version, source URL, date retrieved, date last
+   verified. Missing header, or a `last_verified` more than a year old, is a finding in its
+   own right: it means the audit's own reference text is unproven, and every alignment
+   judgement below inherits that.
 
 ## Step 1 — Inventory before judgement
 

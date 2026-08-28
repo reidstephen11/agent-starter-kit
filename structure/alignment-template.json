@@ -19,7 +19,6 @@
     }
   ],
 
-  "assessment_evidence": [
-    "_comment: optional extra paths that count as assessment artefacts, for when the real instrument is a PDF and only its source file carries the descriptor codes"
-  ]
+  "_assessment_evidence_note": "Optional extra paths that count as assessment artefacts, for when the real instrument is a PDF and only its source file carries the descriptor codes. Leave the list empty if there are none — do not put explanatory text inside it, because anything in the list is read as a path.",
+  "assessment_evidence": []
 }
