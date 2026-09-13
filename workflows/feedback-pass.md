@@ -27,9 +27,12 @@ it. Every rule below is a guard against that.
    to a provider. So the question is not "is it on my machine", it is "is this service and
    this account approved for identifiable student work at my school". Confirm that, then:
    work from the locally-synced school folder, no cloud/web agent mode, no personal
-   account, nothing pasted into a chat window.
-3. **Folder IDs, never names**, in every report, profile, prompt and filename. Prefer an
-   opaque code over initials: in a class of twenty-five, initials identify.
+   account, nothing pasted into a chat window. Approval must cover the features and
+   category of information involved, including processing and retention. If unclear,
+   stop before reading and use fictional examples. AGENTS.md is guidance, not an
+   enforced privacy barrier; check actual permissions and connected services.
+3. **Folder IDs, never names**, in every report, profile, prompt and filename. Use an
+   opaque code, not initials. Codes do not make the work anonymous.
 4. **Know what you are putting through it.** The agent reads every field it is pointed at,
    including reflective writing — so if a student discloses something, the model has
    already processed it by the time step 5 stops it being quoted. Step 5 protects the

@@ -29,7 +29,11 @@ network access.
   folder, into any other workspace, or into any other tool or service. No cloud agent mode,
   no personal accounts, no pasting into a chat window. Note what this rule is and isn't:
   what you read here already goes to your provider's servers — that is what the approval
-  covers. This rule stops it going anywhere *else*.
+  covers. This instruction prohibits further copying; it does not technically prevent it.
+- Before reading, confirm approval covers the specific service, account, features and
+  category of information, including processing and retention. If unclear, stop.
+- AGENTS.md does not enforce privacy. Check actual permissions and connected services;
+  disabling command-network access does not disable the client's model requests.
 - **Folder IDs only** in reports, profiles, filenames and prompts. Never a full name, and
   never a name-to-ID mapping anywhere in this folder. Pseudonymous is not anonymous — an ID
   attached to a student's own writing is still student information, and initials in a class

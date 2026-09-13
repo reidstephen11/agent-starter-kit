@@ -25,10 +25,27 @@ intimidating and takes about ten minutes to get used to. If you have never opene
 that is the actual barrier here, and it is worth asking your school's IT or a colleague
 who codes to sit with you for the first fifteen minutes.
 
-**One thing to be clear about before you go further:** none of those tools runs the AI on
-your computer. They read files on your machine and send what they read to the provider's
-servers. That distinction does nothing to Track A, where the files are your own unit plans,
-and it decides everything about Track B. See rule 1 below.
+**Local files do not mean local-only processing.** With normal signed-in Codex,
+relevant file contents may be sent to OpenAI for processing. Connected tools can send
+information to other services. Keeping files in OneDrive, choosing a local task or
+restricting command-network access does not by itself prevent those transfers.
+
+**AGENTS.md contains instructions, not an enforced privacy barrier.** Confirm the actual
+file permissions, connected services and approved data categories before use. A Business
+licence does not itself establish school approval or mean there is no processing or
+retention. Check the applicable service and account arrangements.
+
+Use no student information during orientation. For any later student-work workflow,
+confirm institutional approval for the specific service, account, features and category
+of information before the agent reads it. If approval is unclear, stop before reading.
+Use fictional examples until it is resolved. Keep sensitive student and staff information
+out of the planning folder; check comments, filenames and document metadata as well.
+
+Removing names is not enough: codes and the content itself can still identify someone.
+Do not give the agent an original sensitive file to anonymise; that requires reading it.
+
+For Codex, see [permissions and model connections](https://learn.chatgpt.com/docs/agent-approvals-security)
+and [workspace data handling](https://learn.chatgpt.com/docs/enterprise/work-admin-faq).
 
 **If you only have a normal chat window** (the ChatGPT, Claude or Gemini website), you can
 still do this: upload the files into a project or attach them to a conversation, and paste
@@ -182,8 +199,8 @@ approved for it.**
 Read this one carefully, because the obvious version of it is wrong. An agent that runs as
 a command on your own computer is **not** an agent that processes your files on your own
 computer: the tools this kit recommends read a local folder and send what they read to a
-provider's servers. Running locally controls *which files are reachable and who is
-copying them* — it does not keep the content on the machine. Assume every word the agent
+provider's servers. Actual permissions control which files are reachable. Running locally
+alone does not restrict access or keep content on the machine. Assume every word the agent
 reads leaves the building, and choose the service and account on that basis.
 
 So: before any identifiable student work goes through any AI tool, confirm with whoever
@@ -191,9 +208,9 @@ approves it that **that specific service, on that specific account type, is appr
 this category of student information.** It is an institutional decision, not a teacher-level
 one, and a locally installed CLI does not supply the assurance on its own. Then keep the
 rest of the boundary: work only from the school-managed folder, never a cloud/web agent
-mode, never a personal account, never by pasting student work into a chat window. This kit
-refers to students by folder ID for the same reason — no names in prompts, reports or file
-contents.
+mode, never a personal account, never by pasting student work into a chat window.
+Use opaque folder codes rather than names or initials. Codes and student writing can still
+identify someone; they do not remove the need for approval.
 
 **2. The agent recommends; you decide.**
 Grades, ratings, milestone ticks, "on track / needs support" calls, and anything a parent
@@ -219,9 +236,8 @@ independent. Decide before you start; both prompts ask you first thing.
 | Setup time | An afternoon | An afternoon, plus building a structured student template |
 | Ongoing | Run a pass when you want one | A weekly commitment, including hand spot-checks |
 
-**Most people should start on Track A and stay there for a term.** It carries no
-student-data risk, and it is where you find out whether your context pack actually says
-what you meant — which is the thing Track B depends on.
+**Most people should start on Track A and stay there for a term.** Keep its inputs free of student and sensitive staff information. It is where you find
+out whether your context pack actually says what you meant — which is the thing Track B depends on.
 
 ### Taking only Track A
 
@@ -253,8 +269,8 @@ Do these in order. Don't start at step 3.
    want things worded. This is the whole game — the agent is only as good as this folder,
    and everything downstream reads from it. Write it yourself: a pack the agent inferred
    about your school is worse than an empty one.
-2. **Run a curriculum pass** on one unit you already know is decent. No student data
-   involved, so nothing can go badly wrong, and you find out quickly whether your context
+2. **Run a curriculum pass** on one unit you already know is decent. Use no student or sensitive staff information, and review the findings. You find out
+   quickly whether your context
    pack says what you meant.
 3. **Only then** consider a feedback pass, and run it in **advisory mode** (agent drafts,
    you enter the feedback) for at least several weeks before letting anything write into a

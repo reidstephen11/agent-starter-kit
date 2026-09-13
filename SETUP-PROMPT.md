@@ -68,8 +68,8 @@ Work through this with me:
    want to use (**opaque codes, not names, and not initials** — in a class of twenty-five
    initials identify). If I try to give you names, stop me and explain why. Ask me two
    things and record my answers: whether I have cleared this with whoever approves it at my
-   school **for the specific AI tool and account I am using** — running locally is not the
-   same as processing locally, and the tool sends what it reads to a provider — and what my
+   school **for the specific AI tool, account, features and category of information I am
+   using** — running locally is not the same as processing locally, and the tool sends what it reads to a provider — and what my
    retention rule is for briefings and per-student profiles. If either is unanswered, build
    the folder shape but tell me not to run a pass until they are.
 
