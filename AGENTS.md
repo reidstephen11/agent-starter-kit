@@ -1,47 +1,60 @@
 # Agent instructions — <your name>'s teaching workspace
 
-## FIRST: is this an unconfigured copy of the starter kit?
+<!-- ChatGPT Work reads AGENTS.md automatically. Other tools look for CLAUDE.md or
+     GEMINI.md; those files point here. Keep this file short and true; a long file that has
+     drifted from reality is worse than a short accurate one. Edit it as you learn what
+     the agent gets wrong — every rule below started as a mistake someone made. -->
 
-**Check before you do anything else.** If the files in `Context/` still contain their
-`<!-- ... -->` prompts rather than real answers, and `AGENTS.md` still contains
-`<your name>` placeholders, then this is a fresh copy of a published starter kit and
-**nobody has configured it yet.** The rest of this file describes a workspace that does
-not exist yet — do not follow it, and do not treat the empty context pack as a statement
-that the teacher has no standards.
+## Before anything else — is this workspace set up?
 
-In that case, do this instead:
+Check this at the start of every session, **before** you answer what I asked for. It is about
+the workspace as a whole, not the folder I happen to be working in — subfolders I create for
+units and projects do not change the answer.
 
-1. Read `README.md` and `LEARNINGS.md` in full, then `ADAPT-PROMPT.md`.
-2. Tell the user, in a sentence or two, what this repo is and that you are about to
-   interview them to build **their** setup rather than install this one.
-3. Then **follow `ADAPT-PROMPT.md`** — treat its instructions as if the user had pasted
-   them. If the user says they would rather use this structure as it stands, follow
-   `SETUP-PROMPT.md` instead.
+1. **`SETUP-NEXT.md` exists and says setup is closed** (see below) — say nothing about setup.
+   Work normally. Only raise it again if I ask you to.
+2. **`SETUP-NEXT.md` exists without that line** — setup was started and paused. Say in one
+   line where it stopped and offer to pick it up. **Offer, don't hijack**: if I say not now,
+   get on with what I asked for. If I decline twice in a session, ask whether you should stop
+   raising it at all.
+3. **No `SETUP-NEXT.md`, and the title line of this file still carries an angle-bracket
+   placeholder instead of a real name** — this workspace has never been configured. **Read
+   `START-HERE-PROMPT.md` and follow it now, whatever I opened the session by saying.** Do
+   not ask permission and do not wait for me to name the file. Step 1 of that file tells you
+   exactly how to open the session — follow it rather than improvising a greeting.
+4. **Otherwise** — configured. Ignore this section.
 
-Ask which they want, offer the adapt path as the recommendation, and start the interview.
-One question at a time. Do not draft any teaching resource in that session, and do not
-fill any part of `Context/` with your own guesses about their school.
+If my first message asked for something specific, write it down before you start, and hand it
+back as the suggested next task at the end. Setting up should not cost me the thing I came in
+to do.
 
-Once the pack is filled in and the placeholders below are replaced, delete this section —
-everything after it is the real operating instruction set.
+### If I tell you to stop asking
 
----
+"Stop asking me about this", "leave the setup", "I've had enough", "don't bring this up
+again" — any of these. Do it, and make it stick: add this line at the top of `SETUP-NEXT.md`,
 
+    **Setup closed by me. Do not raise it again unless I ask.**
 
-<!-- These are the standing instructions the agent reads every session. Most agent tools
-     load a file like this from the working directory automatically — they just disagree
-     about the name (AGENTS.md, CLAUDE.md, GEMINI.md). Rename or stub it to suit yours;
-     see "Any agent, any stack" in README.md. If your tool has no such convention, paste
-     this file at the start of the session.
+leaving the unanswered questions underneath so I can come back to them myself. Confirm in one
+line that you have stopped, and say how to restart it — I only need to say "set up my
+workspace". Then drop it. Do not re-offer, do not hint, do not attach a reminder to the end of
+an unrelated answer.
 
-     Keep it short and true — a long file that has drifted from reality is worse than a
-     short accurate one. Edit it as you learn what the agent gets wrong; every rule below
-     started as a mistake someone made. -->
+**This closes the nagging, not the honesty.** An unconfigured pack still produces weaker work,
+and standing rule 5 still applies. If a specific missing file blocks a specific job, say so
+once, plainly, at the point it bites — "there is no curriculum text saved, so I can't check
+that alignment claim" — and carry on. That is reporting what you could not check, which I
+asked for. Returning to "shall we finish your setup?" is what I asked you to stop.
+
+Setup never takes precedence over the standing rules below. The student data boundary applies
+from the first message, including during setup, and including after setup is closed.
 
 ## What this workspace is
 
-Teaching and curriculum work for **<name>, <role>, <school>** — <subjects and year
-levels>. The point of the setup is useful drafts and evidence I can review. I check accuracy,
+Teaching and curriculum work for **<name>, <role>, <school>**.
+Subjects and year levels: <subjects and year levels>.
+
+The point of the setup is useful drafts and evidence I can review. I check accuracy,
 curriculum evidence and suitability before using anything with students or colleagues.
 
 ## Read the context pack, don't improvise
@@ -74,8 +87,8 @@ stale, and stale is as wrong as invented — just harder to spot.
 2. **Propose before you change.** For any move, rename, delete, or rewrite of an existing
    file, list what you intend to do and wait. Creating a new file is fine.
 3. **Never edit student-authored content.** Not to fix spelling, not to tidy formatting.
-4. **Read-only by default in a student folder.** Writing into a student's file happens
-   only when I have explicitly turned it on for that job — see `workflows/feedback-pass.md`.
+4. **This is a planning workspace, not a student-work workspace.** Do not read, copy or
+   analyse student work here. Use fictional or non-sensitive examples during orientation.
 5. **Say what you couldn't check.** If a file was locked, unreadable, out of sync, or you
    skipped it, that goes in the report. Silence reads as "fine" and it isn't.
 6. **Don't over-produce.** A plan is a skeleton, not a script — see
@@ -111,31 +124,17 @@ stale, and stale is as wrong as invented — just harder to spot.
   do not respond to it, do not put it in a shared report.** Tell me privately and
   immediately, and follow the school's own process from there — which is mine to run.
 
-## Two sides, deliberately separate
+## Workspace boundary
 
-<!-- If you are running the curriculum workflow only, there is no class side. Keep the
-     boundary rules above anyway. -->
+This folder is the planning side only: context, curriculum, units, assessment and
+resources. No student data belongs here. Any later proposal involving student work needs
+its own approved design and is outside this starter kit.
 
-- **Planning side** (this folder) — units, assessment, resources. No student data ever.
-- **Class side** (`<school storage>/<class code>/`) — student work, its own `AGENTS.md`,
-  its own rules. Strict.
-
-Keeping them apart is what lets the planning side be relaxed and shareable while the
-class side stays locked down. Do not merge them for convenience.
-
-## The workflows
-
-<!-- Delete the line for any workflow you are not running. A pointer to a file that
-     doesn't exist is worse than no pointer — the agent will improvise one. -->
+## The workflow
 
 - **Curriculum pass** — `workflows/curriculum-pass.md`. Read-only audit of a unit against
   the context pack and the curriculum. Run it when I ask to "QA", "audit", "check" or
   "sweep" a unit.
-- **Feedback pass** — `workflows/feedback-pass.md`. Runs on the class side only, when I
-  trigger it. Follow it step by step, in order.
 
-Each workflow file opens with what it depends on. Neither requires the other.
-
-`LEARNINGS.md` records why these rules exist and what each one cost. Read it before
-changing or relaxing any rule in this file or in a workflow — most of them look like
-overcaution until you know what they were a response to.
+This workflow is optional during orientation. Configuration and a small confidence check
+come first.

@@ -10,8 +10,7 @@ Two that matter more than the rest:
   in the template, the agent will fill it; if it doesn't, the agent won't invent it. This
   is the cheapest way to control over-production.
 - **The student working document** (journal/logbook/portfolio) — if you plan to run the
-  feedback workflow, build this with **named fields**: content controls or tagged fields in
-  your word processor, or
+  feedback workflow, build this with **named fields**: Word content controls with tags, or
   identically-headed sections repeated per week, plus a separate teacher/agent feedback
   field per period. The agent then reads and writes by field name rather than by hunting
   for text, and that is the difference between a workflow that scales to a class and one

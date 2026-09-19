@@ -1,30 +1,24 @@
 # Folder structure
 
-**Track A (curriculum only) needs tree 1. Track B needs both.** If you are not running the
-feedback workflow, delete tree 2 from this file so nobody later mistakes it for something
-you set up.
+This starter kit creates one planning workspace. No student data belongs in it.
 
-Two separate trees. Keeping them apart is what lets the planning side be open and
-shareable while the student side stays locked down. Do not merge them for convenience.
-
-## 1. Planning side — no student data, ever *(both tracks)*
+## Planning workspace — no student data, ever
 
 ```text
 <Your teaching workspace>/
 ├── AGENTS.md                       operating instructions the agent reads every session
-├── Context/                        your control surface (see Context/index.md)
+├── Context/                        the teacher's control surface
 │   ├── index.md
-│   ├── school-profile.md
+│   ├── school-profile.md           school identity, vision, values, school-wide constraints
+│   ├── my-profile.md               teacher, subjects, cohorts and constraints
 │   ├── teaching-beliefs.md
 │   ├── writing-style.md
 │   ├── EXCLUSIONS.md
 │   ├── curriculum/                 official descriptor text, saved from the source
 │   ├── templates/                  blank unit plan, lesson, assessment, student journal
-│   ├── exemplars/                  resources you're happy with
-│   └── _source/                    the long PDFs you distilled from
+│   └── exemplars/                  resources you're happy with
 ├── workflows/
-│   ├── curriculum-pass.md
-│   └── feedback-pass.md
+│   └── curriculum-pass.md
 └── <Subject>/
     ├── Curriculum Map — <Subject>.<ext>     coverage across all units (derived, see below)
     └── Year <n> — <Unit name>/
@@ -41,6 +35,9 @@ shareable while the student side stays locked down. Do not merge them for conven
         ├── QA/                     dated findings files from curriculum passes
         └── _archive/               superseded versions, moved here the moment they're replaced
 ```
+
+You create the `<Subject>/` folders yourself, as you need them. `Context/` and `AGENTS.md`
+stay at the root and apply to everything below.
 
 Four conventions that carry most of the weight:
 
@@ -62,53 +59,7 @@ scratch. Small subject: keep the map by hand and tell the agent it must be updat
 same job. Many units: have the agent write you a small script that regenerates the
 coverage matrix from the per-unit JSON files.
 
-## 2. Class side — student work, school-managed storage only *(Track B only)*
-
-```text
-<school storage>/<class code>/<Unit>/
-├── AGENTS.md                       privacy boundary FIRST, then the local rules
-├── WEEKS.md                        calendar dates → unit weeks → milestone targets
-├── <ID>/                           one folder per student — an opaque code, NEVER a name
-│   └── <ID> Journal.docx           the structured working document
-├── _TEST/                          fake student; every workflow change is tried here first
-├── _ARCHIVE/                       withdrawn students; excluded from every sweep
-└── _reports/                       teacher-private
-    ├── 00 START HERE.md            your map of this folder and the weekly routine
-    ├── LOG.md                      one line per pass
-    ├── YYYY-MM-DD briefing.md      dated, immutable
-    ├── students/<ID>.md            per-student profile — your notes + agent-maintained patterns
-    └── internals/                  anything the agent builds for itself; you never open it
-```
-
-- **`_reports/` root is yours; `internals/` is the agent's.** Without that split, the
-  folder you actually read fills up with the agent's working files within a month.
-- **Per-student profile files are the memory.** They are what makes week 9's feedback know
-  about week 3. Keep a section of your own notes in them, and tell the agent it may read
-  those but never edit them.
-- **Dated reports are immutable, not permanent.** Never edit an old one — the history is
-  the audit trail if a feedback decision is ever questioned. But set a deletion date at
-  setup (end of the school year is a reasonable default), or the audit trail becomes an
-  indefinite student record you never decided to keep.
-- **Codes, not initials.** In a class of twenty-five, initials identify. And an ID attached
-  to a student's own writing is pseudonymous, not anonymous — it is still student
-  information and the boundary rules still apply to it in full.
-- **`_TEST` earns its keep the first time a change corrupts something.**
-
 ## If you use git
 
-Optional, and on the planning side it gives you an undo and a tripwire for cloud-sync
-clobbers.
-
-**On the class side, the default answer is don't.** There is no version-control problem
-here worth the risk of a repo full of student work acquiring a remote one afternoon. If you
-do it anyway: **never add a remote**, and use the deny-by-default template in
-`class-side-gitignore-template.txt` — it ignores everything and allows back only the
-instruction files. Do not write your own blocklist of extensions: it will stop the
-documents and miss the slide deck, the prototype photo, the exported PDF and the enrolment
-spreadsheet someone dropped in the folder.
-
-One thing about `.gitignore` that catches people out, on either side: **it only affects
-files git is not already tracking.** Adding a path to it after the file has been committed
-does nothing, and the file stays in the history even if you delete it later. Decide what is
-ignored before the first commit — see the note at the bottom of this repo's own
-`.gitignore`.
+Optional, but it gives you an undo and a tripwire for cloud-sync clobbers. Do not add
+student or sensitive staff information to a repository or commit history.

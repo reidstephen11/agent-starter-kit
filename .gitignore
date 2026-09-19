@@ -2,39 +2,27 @@
 .DS_Store
 Thumbs.db
 
-# Word/Office lock files — these appear in class folders and must never be committed
+# Word/Office lock files
 ~$*
 
-# Ignored from the first commit, which is the only thing that makes an ignore rule
-# reliable. Put anything here you want kept out of a fork you publish — including your
-# filled-in copies of the Context/ pack files. See the note at the bottom of this file.
-Context/private/
+# Created during orientation; do not publish a half-finished setup
+SETUP-NEXT.md
 
-# Never commit anything from the class side. If you ever put a git repo near student
-# work, these are the lines that matter — and do not add a remote. There is a
-# deny-by-default template for the class side in
-# structure/class-side-gitignore-template.txt; prefer it to these four lines.
-_reports/
-students/
-*.docx
-*.doc
+# Optional private copies of filled-in context — see the note below
+Context/private/
 
 # ---------------------------------------------------------------------------
 # READ THIS BEFORE YOU PUSH A FORK
 #
-# The Context/ pack files — school-profile.md, teaching-beliefs.md, writing-style.md and
-# anything you save into Context/curriculum/ — are TRACKED in this repo. Adding them to
-# this file later does NOT untrack them: .gitignore only affects files git is not already
-# following. So if you fork, fill them with your real school detail and push, you publish
-# them, and no amount of editing this file afterwards changes that.
+# The Context/ pack files — school-profile.md, my-profile.md, teaching-beliefs.md,
+# writing-style.md and anything you save into Context/curriculum/ — are TRACKED in
+# this repo. Adding them to this file later does NOT untrack them: .gitignore only
+# affects files git is not already following. So if you fork, fill them with your
+# real school detail and push, you publish them.
 #
-# For most people that is fine — there is no student data in those files and much of it is
-# worth sharing. If it is not fine for you, do one of these BEFORE your first push:
+# For most people that is fine — there is no student data in those files. If it is
+# not fine for you, do one of these BEFORE your first push:
 #
-#   * Keep your filled-in versions in Context/private/ (ignored above), or
-#   * untrack them:
-#       git rm --cached Context/school-profile.md Context/teaching-beliefs.md Context/writing-style.md
-#       printf '%s\n' Context/school-profile.md Context/teaching-beliefs.md Context/writing-style.md >> .gitignore
-#     then confirm with: git status --short
-#   * or simply never add a remote. Local git still gives you the undo and the tripwire
-#     against cloud-sync clobbers, which is most of why you wanted it.
+#   * Keep filled-in versions in Context/private/ (ignored above), or
+#   * untrack them, then add the paths to this file, or
+#   * never add a remote. Local git still gives you an undo.
