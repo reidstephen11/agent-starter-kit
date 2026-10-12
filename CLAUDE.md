@@ -7,7 +7,8 @@
 **All instructions for this folder live in [`AGENTS.md`](AGENTS.md) — read it now, in full,
 before doing anything else.**
 
-If `Context/` is still full of `<!-- ... -->` prompts, this is a fresh copy of a published
-starter kit and nothing has been configured yet. `AGENTS.md` opens with what to do in that
-case: read `README.md` and `START-HERE-PROMPT.md`, then interview the teacher and populate
-the context pack. Do not start generating teaching resources.
+`AGENTS.md` checks `SETUP-NEXT.md` and `Context/private/index.md` to decide whether setup
+is new, paused or complete. Public `Context/` templates stay blank even after setup.
+Follow that check, then read `README.md` and `START-HERE-PROMPT.md` if orientation is due.
+Interview the teacher and populate the private copies. Do not start generating teaching
+resources during orientation.

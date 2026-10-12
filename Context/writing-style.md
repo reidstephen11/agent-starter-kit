@@ -1,6 +1,7 @@
 # House style
 
-<!-- Each heading carries the exact opening question the agent asks (Q), one example answer
+<!-- This is a public template. Save completed answers in Context/private/writing-style.md.
+     Each heading carries the exact opening question the agent asks (Q), one example answer
      (Eg), and when to follow up (Probe). ASK NOW is required this session; ASK LATER is
      deferred to SETUP-NEXT.md if time is short. "Not sure — skip" is a valid answer and
      leaves the heading empty.

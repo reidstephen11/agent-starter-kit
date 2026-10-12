@@ -1,6 +1,7 @@
 # School profile
 
-<!-- This file records the school. Teacher, subject and cohort live in my-profile.md.
+<!-- This is a public template. Save completed answers in Context/private/school-profile.md.
+     This file records the school. Teacher, subject and cohort live in the private my-profile.md.
 
      Each heading carries the exact opening question the agent asks (Q), one example answer
      (Eg), and when to follow up (Probe). The agent asks Q as written, offers Eg only if I

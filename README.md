@@ -9,12 +9,12 @@ By the end of orientation, the teacher should have:
 
 - opened their own locally downloaded copy of this folder as a local project;
 - confirmed they are signed into the school-approved ChatGPT workspace;
-- completed the core files in `Context/` in their own words;
+- completed their own context files in `Context/private/` in their own words;
 - recorded which curriculum authority and school templates apply;
 - tried one small, privacy-safe task using the saved context; and
 - received a clear summary of what is complete and what to add later.
 
-No student information or student-work workflow is part of this orientation.
+No identifiable student information or student-work workflow is part of this orientation.
 
 ## Get the folder
 
@@ -22,16 +22,25 @@ On the GitHub page: **Code → Download ZIP**. Unzip it, then follow **Start her
 not need a GitHub account to use the kit. Fork or clone only if you want your own copy on
 GitHub.
 
+**Do not push your completed teaching workspace to a public repository.** Orientation
+saves your answers and teaching documents in `Context/private/`, which Git ignores by
+default. The files outside that folder are the public templates, not places to save
+personal answers. Review every staged file before pushing; Git can still publish files
+you force-add, already tracked files, and teaching documents saved elsewhere in the kit.
+Ignoring a folder prevents ordinary Git staging, not AI processing or other sharing.
+
 ## Start here
 
 1. Copy this folder into your school-managed teaching area and make sure it is available
    on this device.
 2. Open the ChatGPT desktop app, **signed into the school workspace and not a personal
    account**, choose **Work locally**, and open this folder as the project. A local project is used because the context is stored in these files.
-3. **Before you start, drop one teaching document into this folder** — a task sheet,
-   lesson resource or unit plan you know well, with no student information in it. The last
-   step of setup checks the agent against it, and a local project can only read what is
-   inside the folder.
+3. **Before you start, create `Context/private/exemplars/` and drop one teaching document
+   into it** — a task sheet, lesson resource or unit plan you know well, with no
+   identifiable student information in it. The last step of setup checks the agent
+   against it. During orientation, the kit instructs the agent to read only inside this
+   project folder unless you explicitly direct it to another location. Opening a folder
+   does not enforce that boundary: actual access depends on permissions and enabled tools.
 4. Open a task and say anything at all — "hi" is enough. The workspace tells ChatGPT Work
    to run setup before anything else, so it starts the interview on its own. If it doesn't,
    say: **Read `START-HERE-PROMPT.md` and follow it.**
@@ -48,12 +57,14 @@ ChatGPT Work; the standing rules are not.
 
 ## The context pack
 
-`Context/` is the important part of this kit:
+`Context/` holds the public starter templates. Orientation copies them into
+`Context/private/` and saves your answers there. After setup, the agent reads
+`Context/private/index.md` and the completed files it points to:
 
 | File | What the teacher records |
 |---|---|
 | `school-profile.md` | School identity, vision, values and anything that changes what a resource can assume |
-| `my-profile.md` | Teacher role, learners, subjects, year levels and local constraints |
+| `my-profile.md` | Teacher role, general cohort learning needs, subjects, year levels and local constraints |
 | `teaching-beliefs.md` | What good planning and teaching look like to this teacher |
 | `writing-style.md` | How student-facing and colleague-facing writing should sound |
 | `EXCLUSIONS.md` | Things the agent must not do, assume or say |
@@ -70,8 +81,13 @@ correct the same assumption twice.
 Use only institution-approved services, accounts, tools and information. Local access
 does not mean local-only processing. During orientation:
 
-- use no student information, student work, sensitive staff information or live class
-  lists;
+- use no student work, identifiable student information, sensitive staff information or
+  live class lists;
+- relevant cohort-level learning needs, including ASD, may be recorded when individuals
+  cannot reasonably be identified; leave out names, emails, addresses, identifiable
+  images, individual profiles and identifying combinations of details;
+- read only files inside this project folder unless you explicitly direct the agent to
+  another location;
 - do not connect email, drives or other services unless they are already approved and
   genuinely needed for the orientation;
 - do not send, publish, share or overwrite anything; and
@@ -92,9 +108,16 @@ answer—not to produce a polished unit during orientation.
 |---|---|
 | `START-HERE-PROMPT.md` | The agent-facing orientation procedure. Tell ChatGPT Work to read and follow it. |
 | `AGENTS.md` | Standing instructions the agent reads for work in this folder. |
-| `Context/` | The teacher's reusable context pack. Empty on purpose until orientation. |
+| `Context/` | Public context templates; completed answers are saved in ignored `Context/private/`. |
 | `workflows/curriculum-pass.md` | An optional, later read-only QA routine. |
 | `structure/` | Optional folder and handoff templates for later use. |
+
+## Earlier versions
+
+Versions before the planning-only replacement on 19 September 2026 are superseded. They
+contain student-feedback procedures, trial accounts and approval claims that are outside
+this kit's current scope. They remain in Git history for reference; do not use them as
+current instructions or as approval for processing student information.
 
 ## Disclaimer and licence
 

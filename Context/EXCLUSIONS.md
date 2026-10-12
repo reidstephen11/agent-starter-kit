@@ -2,6 +2,10 @@
 
 Read this **before generating any pedagogical content.**
 
+This is the public starter list. Orientation copies it to `Context/private/EXCLUSIONS.md`
+and saves agreed additions there. Keep personal answers out of this public file. Read
+this starter list as well as the private copy so its standing exclusions are retained.
+
 These are excluded precisely because they are what an agent reaches for by default: they
 are common in its training data, they sound professional, and several of them are still
 widely believed. Without this list you will get them, and they will pass a quick read.
@@ -18,7 +22,7 @@ Each exclusion names a replacement — the point is to redirect, not just to for
 | AI-detection tools or claims that writing "looks AI-generated" | Process evidence: drafts, version history, checkpoints, conversation about the work. Never accuse a student. |
 | Scripted teacher talk — word-for-word dialogue for the teacher to read out | Specify the intent, the key question, the checkpoint. Leave the delivery to the teacher. |
 | Invented statistics, effect sizes, or citations | Cite only what is in the context pack or a source you can point to. If you don't have one, say the claim is reasoned rather than evidenced. |
-| Curriculum wording written from memory | Quote from `Context/curriculum/`. Nothing else. |
+| Curriculum wording written from memory | Quote from `Context/private/curriculum/`. Nothing else. |
 | Fabricated confidence about what will work in this classroom | Say what the trade-off is and let the teacher decide. |
 
 ## When something asks for an excluded thing

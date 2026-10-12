@@ -8,21 +8,18 @@ Thumbs.db
 # Created during orientation; do not publish a half-finished setup
 SETUP-NEXT.md
 
-# Optional private copies of filled-in context — see the note below
+# Required local destination for completed profiles and supplied teaching documents
 Context/private/
 
 # ---------------------------------------------------------------------------
 # READ THIS BEFORE YOU PUSH A FORK
 #
-# The Context/ pack files — school-profile.md, my-profile.md, teaching-beliefs.md,
-# writing-style.md and anything you save into Context/curriculum/ — are TRACKED in
-# this repo. Adding them to this file later does NOT untrack them: .gitignore only
-# affects files git is not already following. So if you fork, fill them with your
-# real school detail and push, you publish them.
+# Keep the tracked Context/ templates and AGENTS.md free of personal answers.
+# Orientation writes completed profiles, its index, curriculum copies, templates
+# and exemplars into Context/private/. Do not force-add that folder.
 #
-# For most people that is fine — there is no student data in those files. If it is
-# not fine for you, do one of these BEFORE your first push:
-#
-#   * Keep filled-in versions in Context/private/ (ignored above), or
-#   * untrack them, then add the paths to this file, or
-#   * never add a remote. Local git still gives you an undo.
+# .gitignore does not protect already tracked files. If an older copy was filled
+# in outside Context/private/, review and untrack those files before pushing.
+# Moving a file or adding an ignore rule does not remove it from existing history.
+# Review every staged file before a push, including teaching files elsewhere in
+# the workspace. A downloaded ZIP used locally needs no GitHub remote.

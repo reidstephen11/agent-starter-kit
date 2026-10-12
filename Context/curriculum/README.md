@@ -1,8 +1,8 @@
 # Curriculum text — saved from the official source
 
 Save the actual text of the descriptors, content descriptions, achievement standards or
-syllabus objectives for your subjects and year levels here, copied from the official site
-(ACARA, QCAA, your state authority) as `.md` or `.txt`.
+syllabus objectives for your subjects and year levels in `Context/private/curriculum/`,
+copied from the official site (ACARA, QCAA, your state authority) as `.md` or `.txt`.
 
 Suggested naming: `<authority>-<subject>-<years>.md`, e.g. `acv9-digital-technologies-7-8.md`.
 

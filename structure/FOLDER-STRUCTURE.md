@@ -1,22 +1,34 @@
 # Folder structure
 
-This starter kit creates one planning workspace. No student data belongs in it.
+This starter kit creates one planning workspace. No student work or identifiable student
+information belongs in it. General cohort learning needs may be recorded when individuals
+cannot reasonably be identified.
 
-## Planning workspace — no student data, ever
+## Planning workspace
 
 ```text
 <Your teaching workspace>/
 ├── AGENTS.md                       operating instructions the agent reads every session
-├── Context/                        the teacher's control surface
-│   ├── index.md
-│   ├── school-profile.md           school identity, vision, values, school-wide constraints
-│   ├── my-profile.md               teacher, subjects, cohorts and constraints
-│   ├── teaching-beliefs.md
-│   ├── writing-style.md
-│   ├── EXCLUSIONS.md
-│   ├── curriculum/                 official descriptor text, saved from the source
-│   ├── templates/                  blank unit plan, lesson, assessment, student journal
-│   └── exemplars/                  resources you're happy with
+├── Context/                        public templates and starter guides
+│   ├── index.md                    public template; do not fill this copy
+│   ├── school-profile.md           interview template
+│   ├── my-profile.md               interview template
+│   ├── teaching-beliefs.md          interview template
+│   ├── writing-style.md             interview template
+│   ├── EXCLUSIONS.md               standing starter list
+│   ├── curriculum/                 public guide
+│   ├── templates/                  public guide
+│   ├── exemplars/                  public guide
+│   └── private/                    local answers and supplied documents; ignored by Git
+│       ├── index.md                completed index and workspace summary
+│       ├── school-profile.md
+│       ├── my-profile.md            includes non-identifying cohort learning needs
+│       ├── teaching-beliefs.md
+│       ├── writing-style.md
+│       ├── EXCLUSIONS.md            private copy and agreed additions
+│       ├── curriculum/              official text and source details
+│       ├── templates/               blank unit plan, lesson, assessment, rubric
+│       └── exemplars/               non-sensitive teaching resources
 ├── workflows/
 │   └── curriculum-pass.md
 └── <Subject>/
@@ -36,8 +48,10 @@ This starter kit creates one planning workspace. No student data belongs in it.
         └── _archive/               superseded versions, moved here the moment they're replaced
 ```
 
-You create the `<Subject>/` folders yourself, as you need them. `Context/` and `AGENTS.md`
-stay at the root and apply to everything below.
+You create the `<Subject>/` folders yourself, as you need them. `Context/private/` and
+`AGENTS.md` stay at the root and apply to everything below. Subject folders are not ignored
+by default: review their contents before any public commit. Keep supplied orientation
+documents in the ignored private folder.
 
 Four conventions that carry most of the weight:
 

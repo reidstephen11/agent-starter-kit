@@ -1,4 +1,4 @@
-# Agent instructions — <your name>'s teaching workspace
+# Agent instructions — teaching workspace
 
 <!-- ChatGPT Work reads AGENTS.md automatically. Other tools look for CLAUDE.md or
      GEMINI.md; those files point here. Keep this file short and true; a long file that has
@@ -11,15 +11,16 @@ Check this at the start of every session, **before** you answer what I asked for
 the workspace as a whole, not the folder I happen to be working in — subfolders I create for
 units and projects do not change the answer.
 
-1. **`SETUP-NEXT.md` exists and says setup is closed** (see below) — say nothing about setup.
+1. **`SETUP-NEXT.md` says setup is closed or orientation is complete** (see below and
+   `START-HERE-PROMPT.md`) — say nothing about setup.
    Work normally. Only raise it again if I ask you to.
-2. **`SETUP-NEXT.md` exists without that line** — setup was started and paused. Say in one
-   line where it stopped and offer to pick it up. **Offer, don't hijack**: if I say not now,
+2. **`SETUP-NEXT.md` exists without either completion/closure marker** — setup was started
+   and paused. Say in one line where it stopped and offer to pick it up. **Offer, don't hijack**: if I say not now,
    get on with what I asked for. If I decline twice in a session, ask whether you should stop
    raising it at all.
-3. **No `SETUP-NEXT.md`, and the title line of this file still carries an angle-bracket
-   placeholder instead of a real name** — this workspace has never been configured. **Read
-   `START-HERE-PROMPT.md` and follow it now, whatever I opened the session by saying.** Do
+3. **No `SETUP-NEXT.md` and no `Context/private/index.md`** — this workspace has never
+   been configured. **Read `START-HERE-PROMPT.md` and follow it now, whatever I opened the
+   session by saying.** Do
    not ask permission and do not wait for me to name the file. Step 1 of that file tells you
    exactly how to open the session — follow it rather than improvising a greeting.
 4. **Otherwise** — configured. Ignore this section.
@@ -51,16 +52,23 @@ from the first message, including during setup, and including after setup is clo
 
 ## What this workspace is
 
-Teaching and curriculum work for **<name>, <role>, <school>**.
-Subjects and year levels: <subjects and year levels>.
+Teaching and curriculum planning. The teacher, role, school, subjects and year levels
+are recorded in `Context/private/index.md` during setup. Keep personal answers out of
+this tracked instructions file.
 
 The point of the setup is useful drafts and evidence I can review. I check accuracy,
 curriculum evidence and suitability before using anything with students or colleagues.
 
 ## Read the context pack, don't improvise
 
-`Context/` is the single source of truth for what "good" means here. Its index is
-`Context/index.md`. Read the file relevant to the job — not all of them, every time.
+The completed context pack is in `Context/private/`. Read its `index.md`, then only the
+files relevant to the job. `Context/index.md` and the other files outside `private/` are
+public starter templates, not completed answers. Read the public `Context/EXCLUSIONS.md`
+as well as any private additions; do not lose the standing exclusions during setup.
+
+If an older configured copy has answers in the tracked templates, use the confirmed
+answers only within the authorised task and flag the publication risk. Moving them into
+`Context/private/` requires a separate requested migration; it does not clean Git history.
 
 Do not substitute general educational knowledge for what is in that folder. If the pack
 does not cover something, say so and ask, rather than filling the gap with the most common
@@ -70,8 +78,8 @@ in the same job — that is how it improves.
 ## Curriculum text is quoted, never recalled
 
 Descriptor codes, content descriptions, achievement standards and syllabus wording come
-from the files in `Context/curriculum/`, saved from the official site. Never write one
-from memory, never adjust the wording to fit a unit, and never invent a code. If the text
+from the files in `Context/private/curriculum/`, saved from the official site. Never write
+one from memory, never adjust the wording to fit a unit, and never invent a code. If the text
 you need is not in that folder, stop and ask me to save it.
 
 Each of those files carries a provenance header — authority, version, source URL, date
@@ -88,11 +96,14 @@ stale, and stale is as wrong as invented — just harder to spot.
    file, list what you intend to do and wait. Creating a new file is fine.
 3. **Never edit student-authored content.** Not to fix spelling, not to tidy formatting.
 4. **This is a planning workspace, not a student-work workspace.** Do not read, copy or
-   analyse student work here. Use fictional or non-sensitive examples during orientation.
+   analyse student work here. Use fictional examples or non-identifying cohort context
+   during orientation. Relevant learning needs, including ASD, may be recorded at cohort
+   level when individuals cannot reasonably be identified. Never save names, emails,
+   addresses, identifiable images, individual profiles or identifying combinations.
 5. **Say what you couldn't check.** If a file was locked, unreadable, out of sync, or you
    skipped it, that goes in the report. Silence reads as "fine" and it isn't.
 6. **Don't over-produce.** A plan is a skeleton, not a script — see
-   `Context/teaching-beliefs.md`. Long output is not better output.
+   `Context/private/teaching-beliefs.md`. Long output is not better output.
 7. **Keep a worklog.** Every unit/project folder keeps a `.worklog.md` (see
    `structure/worklog-template.md`). Read it before starting work in that folder; keep its
    **Next / Open** section current as you go. It is how the next session — or the next
@@ -127,8 +138,21 @@ stale, and stale is as wrong as invented — just harder to spot.
 ## Workspace boundary
 
 This folder is the planning side only: context, curriculum, units, assessment and
-resources. No student data belongs here. Any later proposal involving student work needs
-its own approved design and is outside this starter kit.
+resources. No student work or identifiable student information belongs here. Any later
+proposal involving student work needs its own approved design and is outside this starter kit.
+
+General, non-identifying cohort learning needs are planning context; individual student
+records are outside this workspace. A diagnosis linked to a recognisable individual
+does not become anonymous because their name was removed.
+
+During orientation, read only files inside this project folder unless I explicitly
+direct you to another location. Apply that instruction to direct file access and to
+other tools; a connector is not a way around it. Opening a folder does not enforce this
+boundary. Actual access depends on permissions and enabled tools.
+
+Save completed context, curriculum copies and supplied teaching documents in
+`Context/private/`, which Git ignores. Keep the public templates and this file free of
+personal answers. Do not force-add ignored files or publish the completed workspace.
 
 ## The workflow
 

@@ -1,9 +1,9 @@
 # Curriculum pass — auditing a unit against my standards
 
-**Depends on:** `Context/index.md` and the pack files it points to · `Context/curriculum/`
+**Depends on:** `Context/private/index.md` and the pack files it points to · `Context/private/curriculum/`
 (the official descriptor text) · a unit folder in roughly the shape of
 `structure/FOLDER-STRUCTURE.md` · the unit's `.worklog.md`.
-**Does not depend on** the feedback workflow or any student data. This file stands alone.
+**Does not use** student work or identifiable student information. This file stands alone.
 
 **What it is.** A read-only audit. The agent reads everything in a unit folder, checks it
 against the context pack and the official curriculum text, and writes one findings file.
@@ -16,12 +16,13 @@ findings file is reviewable evidence, and two runs a month apart are comparable.
 
 ## Before you start
 
-1. Read `Context/index.md`, then the pack files relevant to this unit type.
+1. Read `Context/private/index.md`, then the completed pack files relevant to this unit type.
+   If private context is missing, report the gap; public templates are not teacher answers.
 2. Read the unit's `.worklog.md` — it is more current than your assumptions about the
    state of the files. Create one if it doesn't exist.
 3. Read the unit's `README.md` and its alignment file (`.curriculum.json` or
    `alignment.md`) — what the unit *claims* it teaches and assesses.
-4. Open the relevant descriptor/standard text from `Context/curriculum/`. Quote from it.
+4. Open the relevant descriptor/standard text from `Context/private/curriculum/`. Quote from it.
 
 ## Step 1 — Inventory before judgement
 
@@ -37,7 +38,7 @@ not a blank.
 
 For every curriculum descriptor the unit claims:
 
-- **Quote the official wording** from `Context/curriculum/`. If the code doesn't exist in
+- **Quote the official wording** from `Context/private/curriculum/`. If the code doesn't exist in
   those files, that is a P1 — a fabricated or mistyped code.
 - **Taught vs assessed.** Decide which the unit actually does, not which it says.
 - **A claim needs evidence outside the document that makes the claim.** If the unit says a
@@ -63,7 +64,7 @@ Against the context pack, not against general principle:
 - **Cognitive demand.** Is the thinking at the level the standard implies, or has the task
   become a compliance exercise with the thinking pre-done for the student?
 - **Over-prescription.** Flag anywhere the plan scripts what should be the teacher's call.
-  (Set your own line on this in `Context/teaching-beliefs.md`.)
+   (Set your own line on this in `Context/private/teaching-beliefs.md`.)
 - **Coherence.** Do the lessons, the task and the rubric describe the same unit? Check
   timings, lesson numbering, sequence and terminology across documents — drift between
   documents is the most common real defect and the easiest to miss when reading one file
@@ -71,12 +72,12 @@ Against the context pack, not against general principle:
 - **Student-facing clarity.** Would the target year level know what to do, by when, and
   what "good" looks like, from the student-facing documents alone?
 - **Accessibility and inclusion**, against whatever the pack says about your cohort.
-- **House style and format compliance** — `Context/writing-style.md` and any mandated LMS
+- **House style and format compliance** — `Context/private/writing-style.md` and any mandated LMS
   or template rules.
 - **Links and references.** Check every link and cross-reference resolves. Report dead
   ones with the file and line.
 - **The exclusions list.** Check nothing in the unit reaches for anything in
-  `Context/EXCLUSIONS.md`.
+  `Context/EXCLUSIONS.md` or the private additions in `Context/private/EXCLUSIONS.md`.
 
 ## Step 4 — Rank the findings
 

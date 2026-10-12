@@ -1,6 +1,7 @@
 # My teaching and cohort profile
 
-<!-- School identity is in Context/school-profile.md. This file records what varies by
+<!-- This is a public template. Save completed answers in Context/private/my-profile.md.
+     School identity is in Context/private/school-profile.md. This file records what varies by
      teacher, subject and cohort.
 
      Each heading carries the exact opening question the agent asks (Q), one example answer
@@ -40,9 +41,9 @@
      school-designed elective with no official syllabus to align to. If a named subject
      and year level cannot go together, say so plainly and ask which it is. Raise it as a
      question to confirm, not as a correction. You are checking the shape of the course,
-     not quoting curriculum — that still comes only from Context/curriculum/. If it is not
+     not quoting curriculum — that still comes only from Context/private/curriculum/. If it is not
      resolved in the session, record it in SETUP-NEXT.md under "Confirm before any
-     curriculum work" and name it in the handoff. Do not set up Context/curriculum/ for a
+     curriculum work" and name it in the handoff. Do not set up Context/private/curriculum/ for a
      syllabus that cannot apply to that cohort. -->
 
 ## The cohort I teach
@@ -54,14 +55,16 @@
          any text-based coding, and about a third have never used a file system properly."
      Q2: "What's the literacy and numeracy range in that class?"
      Eg: "Wide. Four or five students read well below year level; two are extension."
-     Q3: "Any EAL/D or additional-needs considerations I should hold on to? Describe the
-         adjustment rather than the student — I won't record names."
-     Eg: "Three EAL/D students, one with a reader-writer adjustment in assessment."
-     NAMES: if the teacher names a student anyway — which is the natural way to answer
-     this question — record the adjustment only, drop the name, and tell them you have
-     done that and why. "One student with an ASD diagnosis needs tasks broken into
-     steps" carries everything the planning needs. This overrides "save my actual
-     answers": a name written here is read at the start of every future session.
+     Q3: "What general learning needs should the planning account for — including EAL/D
+         or ASD where relevant? Keep it at cohort level, without identifying individuals."
+     Eg: "The cohort includes autistic learners. Consider predictable routines and sensory
+         load, and keep support flexible because individual needs vary."
+     PRIVACY: relevant cohort-level needs, including ASD, can be recorded only when
+     individuals cannot reasonably be identified. Do not record names, emails, addresses,
+     identifiable images, individual profiles, or combinations of class, diagnosis and
+     distinctive circumstances that identify a learner. If identifying details are given,
+     do not repeat or save them; explain the boundary and ask for a general planning need.
+     This overrides "save my actual answers". Removing a name alone is not sufficient.
      Q4: "What actually motivates this group, and what loses them?"
      Eg: "They'll work hard on anything with a visible product. Long written scaffolds
          before they've built anything lose them in about ten minutes."
@@ -77,7 +80,7 @@
          again at marking."
      Probe if more than one authority applies across the named courses — record which
      applies to which.
-     Do not paste recalled descriptors here. Official wording is saved in Context/curriculum/. -->
+     Do not paste recalled descriptors here. Official wording is saved in Context/private/curriculum/. -->
 
 ## My responsibilities and constraints
 

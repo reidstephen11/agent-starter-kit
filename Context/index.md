@@ -1,17 +1,19 @@
 # Context pack — index
 
-The single source of truth for what "good" means in this workspace. During orientation,
-complete the teacher-owned rows in order. After setup, the agent reads only the files
-relevant to the job.
+The distributed copy is the index template. Orientation copies it and the profile templates into
+`Context/private/`, then completes the private copies in order. After setup, the agent
+reads `Context/private/index.md` and only the files relevant to the job. The paths in the
+table are relative to that private index. Keep the public `Context/index.md` free of
+personal answers; update the private copy with the teacher's summary and progress.
 
-**Fill these in yourself.** They are deliberately empty. A pack the agent wrote about your
-school by inference is worse than no pack, because you will stop being able to tell which
+**Fill the private copies with your own answers.** They are deliberately empty. A pack
+the agent wrote about your school by inference is worse than no pack, because you will stop being able to tell which
 of your standards are actually yours.
 
 | File | Read it when | Status |
 |---|---|---|
 | `school-profile.md` | Any resource that must fit this school's identity and context | ☐ empty |
-| `my-profile.md` | Any resource that has to fit this teacher, subject and cohort | ☐ empty |
+| `my-profile.md` | Any resource that has to fit this teacher, subject and general cohort learning needs | ☐ empty |
 | `teaching-beliefs.md` | Planning a unit or lesson, or auditing one | ☐ empty |
 | `writing-style.md` | Writing anything anyone else will read | ☐ empty |
 | `EXCLUSIONS.md` | **Before generating any pedagogical content — and before recording anything into the context pack** | ◐ starter list provided |

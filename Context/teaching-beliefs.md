@@ -1,6 +1,7 @@
 # How I want teaching and learning designed
 
-<!-- This is the file that does the most work. Be specific and be opinionated —
+<!-- This is a public template. Save completed answers in Context/private/teaching-beliefs.md.
+     This is the file that does the most work. Be specific and be opinionated —
      "evidence-informed practice" tells the agent nothing it didn't already assume.
 
      Each heading carries the exact opening question the agent asks (Q), one example answer
@@ -11,7 +12,7 @@
      short and carried into SETUP-NEXT.md. "Not sure — skip" is a valid answer, and a
      skipped heading stays empty rather than being filled with a sensible-sounding default.
 
-     School vision and values belong in school-profile.md. Do not copy them here and
+     School vision and values belong in the private school-profile.md. Do not copy them here and
      present them as the teacher's personal beliefs. -->
 
 ## Discipline-specific teaching
