@@ -1,0 +1,25 @@
+{
+  "_comment": "Save as .curriculum.json at the unit folder root. This is the unit's own record of what it teaches and assesses, and the source the subject curriculum map aggregates from. Keep it in the same change as any alignment edit.",
+
+  "unit": "<Unit name>",
+  "code": "<short label, e.g. OB>",
+  "subject": "<subject>",
+  "band": "<e.g. 7-8 | 9-10>",
+  "year": "<n>",
+  "status": "live",
+  "assessment_technique": "<e.g. project folio with rubric>",
+
+  "descriptors": [
+    {
+      "code": "<official descriptor code>",
+      "coverage": "assessed",
+      "inferred": false,
+      "evidence": "Rubric.html#criterion-2",
+      "_note": "coverage: assessed | taught. inferred: true means it is not explicitly tagged in the plan — a claim to be confirmed, not a fact. evidence is an optional pointer to where an assessed claim is proven; leave it out and the agent searches the assessment artefacts."
+    }
+  ],
+
+  "assessment_evidence": [
+    "_comment: optional extra paths that count as assessment artefacts, for when the real instrument is a PDF and only its source file carries the descriptor codes"
+  ]
+}
